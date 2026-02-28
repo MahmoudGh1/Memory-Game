@@ -1,4 +1,3 @@
----
 
 ## 🃏 Game Mechanics
 - How many cards are in the deck? (8 pairs? 16 pairs?)
@@ -10,7 +9,7 @@
 - Is there a move limit or time limit?
 - Does the game have difficulty levels?
 
----
+
 
 ## 🎨 Card Design
 - What goes on the card faces? (emojis, images, numbers, letters, icons?)
@@ -19,14 +18,14 @@
 - Is there a flip animation? (CSS 3D transform?)
 - What does a matched card look like vs. an unmatched one?
 
----
+
 
 ## 🗂️ Grid & Layout
 - What's the grid layout? (4x4, 4x3, 6x6?)
 - Is the grid responsive (mobile-friendly)?
 - Is the grid fixed or does it change based on difficulty?
 
----
+
 
 ## 🏆 Scoring & Progression
 - Is there a score? What does it track? (matches, moves, time, or a combo?)
@@ -36,14 +35,14 @@
 - Are high scores saved? (localStorage?)
 - Is there more than one level?
 
----
+
 
 ## 🔀 Shuffling
 - How are cards shuffled? (Fisher-Yates algorithm?)
 - Are cards reshuffled on every new game?
 - Is the shuffle seeded (same layout every time) or random?
 
----
+
 
 ## 🎮 Game States
 - What is the initial/start state? (splash screen, or straight to board?)
@@ -52,21 +51,21 @@
 - Can the player pause the game?
 - Is there a restart button? Does it reshuffle?
 
----
+
 
 ## 🔊 Audio & Feedback
 - Is there sound? (card flip, match, mismatch, win?)
 - Is sound on by default or off?
 - Is there visual feedback beyond card state? (screen flash, confetti?)
 
----
+
 
 ## 💾 State Management
 - Where does game state live? (JS object, class, or just loose variables?)
 - What needs to be tracked at any time? (flipped cards, matched pairs, move count, timer)
 - Do you save progress to localStorage?
 
----
+
 
 ## 🛠️ Code Architecture
 - Is this all in one file or split into HTML/CSS/JS files?
@@ -75,7 +74,7 @@
 - How do you prevent the player from clicking during the "check" delay?
 - How do you dynamically generate the board in JS vs. hardcoding HTML?
 
----
+
 
 ## 📱 UX & Accessibility
 - Does it work on mobile/touch screens?
@@ -84,7 +83,7 @@
 - What font and color scheme are you using?
 - Is there a dark/light mode?
 
----
+
 
 ## 🃏 `Card` Class
 - What properties does a Card have?
@@ -95,7 +94,7 @@
 - Does a Card know how to **render itself**, or does something else render it?
 - Is Card responsible for its own **click event**, or does the Board/Controller handle that?
 
----
+
 
 ## 🗂️ `Board` Class
 - What does the Board own? (the grid element, the array of Cards?)
@@ -106,7 +105,7 @@
 - Does the Board expose a way to get cards? (`getCards()`, `getUnmatched()`?)
 - Does the Board listen for click events, or does it delegate to the Controller?
 
----
+
 
 ## 🎮 `GameController` Class
 - What does the Controller orchestrate? (Board, ScoreTracker, Timer, all of the above?)
@@ -117,7 +116,7 @@
 - Does the Controller talk to the Board directly, or through an interface?
 - Does the Controller update the UI (score, timer display), or is that a separate class?
 
----
+
 
 ## 📋 Interfaces
 - Do you have a `ICard` interface? What's on it?
@@ -127,7 +126,7 @@
 - Do you want a `IRenderer` interface so DOM logic is swappable/testable?
 - Do you want a `IEventEmitter` / observer pattern so classes don't directly depend on each other?
 
----
+
 
 ## 🔗 Relationships & Dependencies
 - Does `Card` depend on `Board`? (it probably shouldn't)
@@ -136,7 +135,7 @@
 - Do you use **dependency injection** (pass Board into Controller) or does Controller instantiate Board itself?
 - Is there a top-level `Game` or `App` class that wires everything together?
 
----
+
 
 ## 🧩 Supporting Classes
 - Do you have a `Deck` class separate from `Board`? (generates & shuffles cards)
@@ -145,7 +144,7 @@
 - Do you have a `UIRenderer` or `DOMManager` class that handles all DOM updates?
 - Do you have an `EventBus` / `EventEmitter` for loose coupling between classes?
 
----
+
 
 ## 🧠 State Ownership
 - Which class owns **game phase**? (idle, playing, paused, won, lost)
@@ -154,4 +153,5 @@
 - Which class owns **the timer value**?
 - Is there a single `GameState` object passed around, or is state distributed across classes?
 
----
+
+
